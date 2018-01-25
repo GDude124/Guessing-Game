@@ -8,14 +8,21 @@
 
 import Foundation
 
-//generate random number
-var randomNumber = arc4random_uniform(100)
-//ask user input
+var randomNumber = Int(arc4random_uniform(100))
+var guess: Int?
 
-//take user input
+print("Please guess a number. You have 5 guesses.")
 
-//determine right or wrong(loop until correct)
+guess = Int(readLine()!)!
 
-//if correct ask if they want to play again
+if randomNumber == guess! {
+    print("YOu WoN")
+}
 
-//if incorrect tell them the correct answer and ask them to play again
+else if randomNumber > guess! {
+    print("Higher")
+}
+
+else if randomNumber < guess! {
+    print("Loop")
+}
